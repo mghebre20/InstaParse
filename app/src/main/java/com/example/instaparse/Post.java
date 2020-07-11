@@ -1,12 +1,15 @@
 package com.example.instaparse;
 
+import android.os.Parcelable;
+
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+
 @ParseClassName("Post")
-public class Post extends ParseObject {
+public class Post extends ParseObject implements Parcelable {
 
     //define keys from Parse
     public static final String KEY_DESCRIPTION = "description";
@@ -43,5 +46,16 @@ public class Post extends ParseObject {
     //SETTER
     public void setUser(ParseUser user) {
         put(KEY_USER, user);
+    }
+
+    //GETTER that will return a string
+    public String getTimeStamp() {
+        //getString is a method from the ParseObject class
+        return getString(KEY_CREATED_KEY);
+    }
+
+    //SETTER
+    public void setTimeStamp(String timeStamp) {
+        put(KEY_CREATED_KEY, timeStamp);
     }
 }
