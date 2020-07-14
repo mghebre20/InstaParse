@@ -6,6 +6,8 @@ import android.graphics.Movie;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import org.parceler.Parcels;
+
 import java.util.List;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -13,17 +15,19 @@ public class DetailsActivity extends AppCompatActivity {
 
     Post post;
     TextView tvTimeStamp;
+    TextView tvCaption;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-//        post = (Post) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));;
+        tvCaption = findViewById(R.id.tvCaption);
 
-        tvTimeStamp = (TextView) findViewById(R.id.tvTimeStamp);
+        post = (Post) Parcels.unwrap(getIntent().getParcelableExtra(Post.class.getSimpleName()));;
 
+        tvCaption.setText(post.getDescription());
 
-
+//        tvTimeStamp = (TextView) findViewById(R.id.tvTimeStamp);
 //        tvTimeStamp.setText(post.get());
     }
 }

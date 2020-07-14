@@ -5,22 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".fragments.PostsFragment">
 
-<<<<<<< HEAD
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/scContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-=======
->>>>>>> bdc1ecacc758db3e5d85ee8057beea3f781ce6d0
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPosts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp" />
-<<<<<<< HEAD
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-=======
->>>>>>> bdc1ecacc758db3e5d85ee8057beea3f781ce6d0
 </FrameLayout>

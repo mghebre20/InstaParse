@@ -1,5 +1,6 @@
 package com.example.instaparse.fragments;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -48,6 +49,7 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false);
+
     }
 
     @Override
@@ -55,7 +57,6 @@ public class ProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //reference to the member variable
-
         rvProfilePosts = view.findViewById(R.id.rvProfilePosts);
         btnLogout = view.findViewById(R.id.btnLogout);
 

@@ -25,10 +25,8 @@ import android.widget.Toast;
 
 import com.example.instaparse.fragments.ComposeFragment;
 import com.example.instaparse.fragments.PostsFragment;
-<<<<<<< HEAD
 import com.example.instaparse.fragments.ProfileFragment;
-=======
->>>>>>> bdc1ecacc758db3e5d85ee8057beea3f781ce6d0
+
 import com.google.android.material.bottomnavigation.BottomNavigationMenu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
@@ -50,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setTitle("Instagram");
 
         //responsible for changing the fragment that is shown in frame layout
         final FragmentManager fragmentManager = getSupportFragmentManager();
@@ -64,32 +63,17 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment;
                 switch (menuItem.getItemId()) {
                     case R.id.action_home:
-<<<<<<< HEAD
 //                        Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
                         fragment= new PostsFragment();
                         break;
                     case R.id.action_compose:
 //                        Toast.makeText(MainActivity.this, "Compose!", Toast.LENGTH_SHORT).show();
-=======
-                        //TODO: update fragment
-                        Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
-                        fragment= new PostsFragment();
-                        break;
-                    case R.id.action_compose:
-                        Toast.makeText(MainActivity.this, "Compose!", Toast.LENGTH_SHORT).show();
->>>>>>> bdc1ecacc758db3e5d85ee8057beea3f781ce6d0
                         fragment= new ComposeFragment();
                         break;
                     case R.id.action_profile:
                     default:
-<<<<<<< HEAD
 //                        Toast.makeText(MainActivity.this, "Profile!", Toast.LENGTH_SHORT).show();
                         fragment= new ProfileFragment();
-=======
-                        //TODO: update fragment
-                        Toast.makeText(MainActivity.this, "Profile!", Toast.LENGTH_SHORT).show();
-                        fragment= new ComposeFragment();
->>>>>>> bdc1ecacc758db3e5d85ee8057beea3f781ce6d0
                         break;
 
                 }
