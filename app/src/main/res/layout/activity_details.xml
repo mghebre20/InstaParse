@@ -13,5 +13,17 @@
         android:layout_height="45dp"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textSize="18sp"
+        tools:text="Caption" />
+
+    <TextView
+        android:id="@+id/tvTimeStamp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/tvCaption"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        tools:text="TimeStamp" />
 </RelativeLayout>

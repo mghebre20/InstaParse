@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import org.parceler.Parcels;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -22,12 +24,16 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
         tvCaption = findViewById(R.id.tvCaption);
+        tvTimeStamp = findViewById(R.id.tvTimeStamp);
 
         post = (Post) Parcels.unwrap(getIntent().getParcelableExtra(Post.class.getSimpleName()));;
 
         tvCaption.setText(post.getDescription());
 
-//        tvTimeStamp = (TextView) findViewById(R.id.tvTimeStamp);
-//        tvTimeStamp.setText(post.get());
+        Date date = post.getCreatedAt();
+        SimpleDateFormat DateFor = new SimpleDateFormat("dd MMMM yyyy");
+        String stringDate = DateFor.format(date);
+        tvTimeStamp.setText(stringDate);
+
     }
 }

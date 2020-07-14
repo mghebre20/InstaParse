@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("Instagram");
+        getSupportActionBar().setTitle("Hello Instagram!");
 
         //responsible for changing the fragment that is shown in frame layout
         final FragmentManager fragmentManager = getSupportFragmentManager();

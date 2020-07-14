@@ -28,6 +28,17 @@ public class Post extends ParseObject implements Parcelable {
         put(KEY_DESCRIPTION, description);
     }
 
+    //GETTER that will return a string
+    public String getTimeStamp() {
+        //getString is a method from the ParseObject class
+        return getString(KEY_CREATED_KEY);
+    }
+
+    //SETTER
+    public void setTimeStamp(String createdAt) {
+        put(KEY_CREATED_KEY, createdAt);
+    }
+
     //GETTER
     public ParseFile getImage() {
         return getParseFile(KEY_IMAGE);
@@ -48,14 +59,4 @@ public class Post extends ParseObject implements Parcelable {
         put(KEY_USER, user);
     }
 
-    //GETTER that will return a string
-    public String getTimeStamp() {
-        //getString is a method from the ParseObject class
-        return getString(KEY_CREATED_KEY);
-    }
-
-    //SETTER
-    public void setTimeStamp(String timeStamp) {
-        put(KEY_CREATED_KEY, timeStamp);
-    }
 }
